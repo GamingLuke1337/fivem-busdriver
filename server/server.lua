@@ -1,11 +1,6 @@
-
-ESX = nil
-
 playerRoutes = {}
 
--- Load up the ESX serverside
-TriggerEvent("esx:getSharedObject", function(library) 
-    ESX = library 
+ESX = exports['es_extended']:getSharedObject()
     
     BusStop.RegisterServerCallbacks(ESX)
     Route.RegisterServerCallbacks(ESX)
@@ -79,4 +74,3 @@ TriggerEvent("esx:getSharedObject", function(library)
             callback(true, earning)
         end)
     end)
-end)
