@@ -1,6 +1,3 @@
-print("Loading Lachee's Bus Driver")
-
--- Master Config
 Config = { }
 Config.debug = false -- Debug visualisation
 
