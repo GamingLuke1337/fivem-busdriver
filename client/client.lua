@@ -6,17 +6,17 @@ ESX = nil
 Citizen.CreateThread(function()
     while ESX == nil do
         if ESX == nil then
-            TriggerEvent("esx:getSharedObject", function(library)
+		ESX = exports['es_extended']:getSharedObject()
                 ESX = library
                 BusStop.RegisterEvents(ESX)
                 Route.RegisterEvents(ESX)
                 EnsureJob(ESX.PlayerData)
-            end)
+            end
             
             Citizen.Wait(0)
         end
     end
-end)
+end
 
 -- Ensures the job blip
 local blip = nil
